@@ -21,13 +21,13 @@ class WeatherList extends React.Component {
         <td>
           <Chart
             data={humidity}
-            color="green"
+            color="red"
           />
         </td>
         <td>
           <Chart
-            data={temps}
-            color="pressure"
+            data={pressure}
+            color="red"
           />
         </td>
       </tr>

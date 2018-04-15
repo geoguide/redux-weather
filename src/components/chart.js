@@ -1,15 +1,19 @@
 import React from 'react';
-import { Sparklines, SparklinesLine } from 'react-sparklines';
 
-const chart = (props) => {
-  console.log(props.color);
-  return (
-    <div>
-      <Sparklines data={props.data} svgHeight={120} svgWidth={180}>
-        <SparklinesLine color={props.color}/>
-      </Sparklines>
-    </div>
-  );
+class Chart extends React.Component {
+  constructor(props) {
+    super(props);
+    console.log(this.props);
+  }
+  render() {
+    return (
+      <div>
+        <div data={this.props.data} svgHeight={120} svgWidth={180}>
+          <div color={this.props.color} />
+        </div>
+      </div>
+    );
+  }
 }
 
-export default chart;
+export default Chart;
